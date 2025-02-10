@@ -55,15 +55,20 @@
                             <p>Area(A) = w X I</p>
                             <div class="flex gap-3">
                                 <div class="flex gap-1">
-                                    <input class="bg-gray-200 rounded-md w-20 text-center" type="text" placeholder="w">
+                                    <input id="req-width-input" class="bg-gray-200 rounded-md w-20 text-center" type="text"
+                                        placeholder="w">
                                     <p>cm</p>
                                 </div>
                                 <div class="flex gap-1">
-                                    <input class="bg-gray-200 rounded-md w-20 text-center" type="text" placeholder="I">
+                                    <input id="req-length-input" class="bg-gray-200 rounded-md w-20 text-center" type="text"
+                                        placeholder="l">
                                     <p>cm</p>
                                 </div>
                             </div>
-                            <div class="card-actions">
+                            <div id="req-input-container">
+
+                            </div>
+                            <div id="req-button" class="card-actions">
                                 <button class="btn btn-primary bg-sky-500 border-none text-white">Calculate</button>
                             </div>
                         </div>
@@ -106,6 +111,7 @@
 
 
     <script src="js/triangle.js"></script>
+    <script src="js/rectangle.js"></script>
 </body>
 
 </html>
