@@ -1,19 +1,19 @@
-document.getElementById('req-button').addEventListener('click', function () {
+document.getElementById('para-button').addEventListener('click', function () {
 
-    const widthInput = getInputById('req-width-input');
-    const lengthInput = getInputById('req-length-input');
+    const baseInput = getInputById('para-base-input');
+    const heightInput = getInputById('para-height-input');
 
-    if (isNaN(widthInput) || isNaN(lengthInput)) {
+    if (isNaN(baseInput) || isNaN(heightInput)) {
         const errorText = document.createElement('h');
         errorText.innerText = 'Invalid input ! Please provide a number.';
-        const inputContainer = document.getElementById('req-input-container')
+        const inputContainer = document.getElementById('para-input-container')
         inputContainer.appendChild(errorText);
     }
     else {
-        const area = widthInput * lengthInput;
+        const area = baseInput * heightInput;
         const areaContainer = document.getElementById('area-container');
         const resultText = document.createElement('p');
-        resultText.innerText = ('Rectangle -----> ' + area);
+        resultText.innerText = ('Parallelogram ----> ' + area);
         areaContainer.appendChild(resultText);
     }
 
