@@ -11,32 +11,83 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="px-10">
+<body class="px-10 py-10">
     <main>
         <div class="flex flex-col justify-between md:flex-row">
             <!-- card container -->
             <div class="px-6">
                 <div class="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                    <div class="card border-2 rounded-md w-64">
+
+                    <div class="card border-2 border-gray-200 shadow-lg rounded-md w-64">
                         <figure class="px-5 pt-5">
-                            <img src="./images/triangle.png"
-                                alt="Shoes" class="rounded-xl" />
+                            <img src="./images/triangle.png" alt="Shoes" class="rounded-xl" />
                         </figure>
                         <div class="card-body items-center text-center space-y-2">
                             <h2 class="card-title">Triangle</h2>
-                            <p>Area(A)= 0.5 X b X h</p>
+                            <p>Area(A) = 0.5 X b X h</p>
                             <div class="flex gap-3">
                                 <div class="flex gap-1">
-                                    <input class="bg-gray-200 rounded-md w-20 text-center" type="text" placeholder="b">
+                                    <input id="base-input" class="bg-gray-200 rounded-md w-20 text-center" type="text"
+                                        placeholder="b">
                                     <p>cm</p>
                                 </div>
                                 <div class="flex gap-1">
-                                    <input class="bg-gray-200 rounded-md w-20 text-center" type="text" placeholder="h">
+                                    <input id="height-input" class="bg-gray-200 rounded-md w-20 text-center" type="text"
+                                        placeholder="h">
+                                    <p>cm</p>
+                                </div>
+                            </div>
+                            <div id="input-container">
+
+                            </div>
+                            <div id="button" class="card-actions">
+                                <button class="btn btn-primary bg-sky-500 border-none text-white">Calculate</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card border-2 border-gray-200 shadow-lg rounded-md w-64">
+                        <figure class="px-5 pt-5">
+                            <img src="/images/rectangle.png" alt="Shoes" class="rounded-xl" />
+                        </figure>
+                        <div class="card-body items-center text-center space-y-2">
+                            <h2 class="card-title">Rectangle</h2>
+                            <p>Area(A) = w X I</p>
+                            <div class="flex gap-3">
+                                <div class="flex gap-1">
+                                    <input class="bg-gray-200 rounded-md w-20 text-center" type="text" placeholder="w">
+                                    <p>cm</p>
+                                </div>
+                                <div class="flex gap-1">
+                                    <input class="bg-gray-200 rounded-md w-20 text-center" type="text" placeholder="I">
                                     <p>cm</p>
                                 </div>
                             </div>
                             <div class="card-actions">
-                                <button class="btn btn-primary w-full">Calculate</button>
+                                <button class="btn btn-primary bg-sky-500 border-none text-white">Calculate</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card border-2 border-gray-200 shadow-lg rounded-md w-64">
+                        <figure class="px-5 pt-5">
+                            <img src="/images/parallelogram.png" alt="Shoes" class="rounded-xl" />
+                        </figure>
+                        <div class="card-body items-center text-center space-y-2">
+                            <h2 class="card-title">Parallelogram</h2>
+                            <p>Area(A) = b X h</p>
+                            <div class="flex gap-3">
+                                <div class="flex gap-1">
+                                    <input class="bg-gray-200 rounded-md w-20 text-center" type="text" placeholder="w">
+                                    <p>cm</p>
+                                </div>
+                                <div class="flex gap-1">
+                                    <input class="bg-gray-200 rounded-md w-20 text-center" type="text" placeholder="i">
+                                    <p>cm</p>
+                                </div>
+                            </div>
+                            <div class="card-actions">
+                                <button class="btn btn-primary bg-sky-500 border-none text-white">Calculate</button>
                             </div>
                         </div>
                     </div>
@@ -44,11 +95,17 @@
             </div>
 
             <!-- calculation container -->
-            <div class="w-96 border-2 rounded-lg p-4">
+            <div class="w-96 border-2 border-blue-300 shadow-lg rounded-lg p-4">
                 <h3 class="text-3xl font-bold text-center underline">Area Calculation</h3>
+                <div id="area-container" class="p-10">
+
+                </div>
             </div>
         </div>
     </main>
+
+
+    <script src="js/triangle.js"></script>
 </body>
 
 </html>
