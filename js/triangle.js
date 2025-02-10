@@ -1,9 +1,8 @@
 document.getElementById('button').addEventListener('click', function () {
     const base = document.getElementById('base-input').value;
-    const baseValue = parseInt(base);
+    const baseValue = parseFloat(base);
     const height = document.getElementById('height-input').value;
-    const heightValue = parseInt(height);
-    console.log(typeof baseValue, typeof heightValue)
+    const heightValue = parseFloat(height);
 
     if (isNaN(baseValue) || isNaN(heightValue)) {
         const errorText = document.createElement('h3');
@@ -16,7 +15,7 @@ document.getElementById('button').addEventListener('click', function () {
 
         const areaContainer = document.getElementById('area-container');
         const resultText = document.createElement('p');
-        resultText.innerText = ('Triangle ' + area);
+        resultText.innerText = ('Triangle -----> ' + area);
         areaContainer.appendChild(resultText);
     }
 })
